@@ -1,0 +1,34 @@
+Problems/Missing features:
+- My delete feature only sends you back to the forum when done, but would be more convenient to send you back to where you were.
+- I removed the edit page because of a last minute issue with file corruption.
+- the delete feature doesn't work on forums, another file corruption. (both corruption issues easy, but time consuming. I figured you'd know i know how to work it by the post delete feature.)
+- There is no add topic page, but I sorta wanted the admin only to be able to do so, and I can do that via Php MyAdmin anyway.
+- I also forgot to credit the open source WYSIWYG text editor I used, CK editor.
+
+-ckeditor refuses to load custom config.js or myConfig files no matter what.
+	-for now just setting the options when i replace the textarea.
+
+-Still some minor formatting issues with text. Possibly fix:
+	I realized i am using nl2br so I don't need line breaks.
+	One fix was display:none; on the br tag for the posts, with entermode p. The only issue is that it looks different in the editor.
+	Later try changing it so the echo is no longer nl2br.
+
+-May need to check what happens if people have noscript enabled.
+
+THE GRAPHICS ERROR IS A WHITE SPACE ISSSUE! FIX IT WITH CSS!
+http://www.netmechanic.com/news/vol7/html_no1.htm
+
+Possibly fixed:
+- I also did not include my edit file, because I found an issue last minute. 
+- I also didn't adapt for resolutions bigger than mine, so the background looks off. Mine is 1280 by 800. 
+- My log in checking system is not case-sensitive, so when you type lowercase for an uppercase user name, it logs you in, but you don't get the options for deleting or editing. 
+
+NOTE: applied following:
+	I needed to generate an SSH KEY, found out how from:
+	    https://help.github.com/articles/generating-ssh-keys
+    Also i changed around the urls used for origin in the config
+    used to be:
+    	url = https://git@github.com/jvandeus/forum.git
+    now it is:
+    	url = ssh://git@github.com:jvandeus/forum.git
+    	
