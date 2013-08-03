@@ -93,10 +93,7 @@ function MM_swapImage() { //v3.0
 	    <a href="forum.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/forumover.png',1)"><img name="Image8" border="0" src="images/forum.png"></a>
 	    </td>
 	    <td>
-	    <a href="portfolio.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/portfolioover.png',1)"><img name="Image9" border="0" src="images/portfolio.png"></a>
-	    </td>
-	    <td>
-	    <a href="about.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image10','','images/aboutover.png',1)"><img name="Image10" border="0" src="images/about.png"></a>
+	    <a href="profile.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/profileover.png',1)"><img name="Image8" border="0" src="images/profile.png"></a>
 	    </td>
 <?php //this will remove the logout link in the bar when use is not logged in.
 if(isset($login)&&$login="true"){ ?>
