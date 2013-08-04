@@ -1,21 +1,26 @@
 <?php include('phpfiles/header.php');?>
+<table id="intro" cellpadding="0px" cellspacing="0px">
+	<tr><td id="greeting">
+		<div id="greeting">
+		<?php
+		if(isset($login) && $login=="true" && $acess==1)
+		{?>
+			<h1>Welcome Administrator. </h1>
+			<p></p><a href="addtop.php">Click here to add a Topic.</a></p>
+		<?php } ?>
+			<h1>Welcome to my Forum!</h1>
+			<p>Currently there is known issues with some of the functionality of this forum, but its a work in progress. Most issues will be
+				fixed soon, but untill then, progress can be monitored on the <a href="https://github.com/jvandeus/phpForum" target="_blank">github</a> page.
+				If there is anything you would like to see done, please let me know by email or in the feedback topic.</p>		
+		</div>
+	</td>
+	<td>
+		<div id="filler">
+			<!-- Fills extra space that is currently Not used -->
+		</div>
+	</td></tr>
+</table>
 
-<div id="spacer">
-<?php
-if(isset($login) && $login=="true" && $acess==1)
-{?>
-	<h1>Welcome Administrator. <a href="addtop.php">Click here to add a Topic.</a></h1>
-<?php } ?>
-	<br>
-	<h1>Welcome to the Forums!</h1>
-	<p>Feel free to Browse around, or maybe give me some feedback. Any suggestions or bugs pointed out would be greatly 
-	appreciated so I can fix them as soon as possible. I build this forum from the ground up and plan to continue 
-	expanding the features here. I understand everything about this code, so it is very easy for me to customize it to do 
-	whatever is needed. If there is something I don't know how to do, I have no problem doing the research.</p>
-	
-	<p>If you want you can log in as an admin to add a topic and see ho things run from that side of things. I can also 
-	implement a multi-level permissions system for users, but this site only has use for 2 levels, user and admin.</p>
-</div>
 <div id="thtop"></div>
 <table id="header" cellspacing="0" cellpadding="0">
 	<tr><th id="topic">Topic</th>

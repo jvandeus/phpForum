@@ -10,6 +10,7 @@ body
 	background-color:#0F0F0F;
 	background-repeat:repeat;
 	font-size:11px;
+	white-space:normal;
 }
 
 table
@@ -57,6 +58,7 @@ p
 }
 img{
 	border: 0px;
+	display: block;
 }
 p img{
 	float: left;
@@ -72,6 +74,9 @@ p img{
 	margin: 0px auto 0px auto;
 	text-align:center;
 	padding: 0px 0px 0px 0px;
+	white-space:nowrap;
+	border-spacing:0;
+    border-collapse:collapse;
 }
 
 #nav
@@ -86,7 +91,6 @@ p img{
 }
 #nav img
 {
-	height:20px;
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 }
@@ -95,18 +99,76 @@ p img{
 {
 	background-color:#444;
 	vertical-align: top;
+	text-align:center;
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 	width:740px;
+	white-space:normal;
 }
 
 #title
 {
 	background-image:url(images/titlebg.png);
 	height:75px;
-	text-align: center;
+	width:740px;
+	text-align: left;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	white-space:normal
+	text-align:left;
+	vertical-align:bottom;
+}
+
+#title img
+{
+	text-align:center;
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
+}
+
+#indicator{
+	position:absolute;
+	display:inline;
+	text-align:left;
+	width:740px;
+	height:65px;
+	vertical-align:bottom;
+	font:Terminal;
+	font-family:Terminal;
+	line-height: 15px;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	top:0px;
+}
+#indicator img{
+	display:inline;
+	margin: 0px 10px 0px 10px;
+	padding: 0px 0px 0px 0px;
+}
+#indicator p{
+	display:inline;
+	vertical-align:top;
+	margin: 0px 0px 0px 10px;
+	padding: 0px 0px 0px 0px;
+}
+
+#info{
+	display:block;
+	position:relative;
+	width:725px;
+	text-align:right;
+	vertical-align:bottom;
+	font:Terminal;
+	font-family:Terminal;
+	font-size: 8px:
+	line-height: 1;
+	margin: 0px 15px 10px 0px;
+	padding: 0px 0px 0px 0px;
+	overflow:hidden;
+}
+#info div{
+	font-size: 20px:
+	line-height: 1;
 }
 
 #header
@@ -371,9 +433,45 @@ width:30px;
 	text-align: center;
 }
 
-#spacer{
+/* Begin flexible intro table */
+/* This way. if the with of the left element is defined, the rest of the space is filled by the other td */
+#intro{
+	width:100%;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	/* border-spacing: 15px; // doesn't work in IE */
+	border-left: 15px;
+	border-top: 15px;
+	border-style: solid;
+	border-color: #444;
+}
+#intro td{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-color:#333;	
+	border-right: 15px;
+	border-bottom: 15px;
+	border-style: solid;
+	border-color: #444;
+}
+#greeting{
 	background-color:#333;
-	text-align:center;
+	text-align:left;
+width:300px;						/* width definition*/
+	margin: 0px 0px 0px 0px;
+	padding: 15px 15px 15px 15px;
+}
+#greeting h1{
+	text-align:left;
 	margin: 0px auto 0px auto;
-	padding: 20px 20px 20px 20px;
+	padding: 0px 0px 0px 0px;
+}
+#greeting p{
+	text-align:justified;
+	margin: 10px auto 0px auto;
+	padding: 0px 0px 0px 0px;
+}
+#filler{
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }

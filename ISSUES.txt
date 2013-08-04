@@ -15,13 +15,17 @@ Problems/Missing features:
 
 -May need to check what happens if people have noscript enabled.
 
-THE GRAPHICS ERROR IS A WHITE SPACE ISSSUE! FIX IT WITH CSS!
-http://www.netmechanic.com/news/vol7/html_no1.htm
-
 Possibly fixed:
 - I also did not include my edit file, because I found an issue last minute. 
 - I also didn't adapt for resolutions bigger than mine, so the background looks off. Mine is 1280 by 800. 
-- My log in checking system is not case-sensitive, so when you type lowercase for an uppercase user name, it logs you in, but you don't get the options for deleting or editing. 
+- My log in checking system is not case-sensitive, so when you type lowercase for an uppercase user name, it logs you in, but you don't get the options for deleting or editing.
+- Small gaps like the one in the header tables was sort of solved by display: block; in images.
+	Downside is that to display centered, you have to apply auto margins such as #title and #title img in the CSS.
+	Other way is to make the return the "display: block;" to "display: inline;" or something similar. http://www.impressivewebs.com/default-css-display-values-html-elements/
+	img by default is inline.
+- Note, keep an eye on the title section in the header. Make browser compatability is not an issue, mess with the css.
+	It may not be flexible right now, so if i want to make that vertically resizable, like ckeditor, I may want to mess with the dimensions and 
+	the margins and padding.
 
 NOTE: applied following:
 	I needed to generate an SSH KEY, found out how from:
