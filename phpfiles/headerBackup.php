@@ -82,39 +82,43 @@ function MM_swapImage() { //v3.0
 
 <body onLoad="MM_preloadImages('images/homeover.png','images/forumover.png','images/profileover.png','images/logoutover.png','images/loading.gif')">
 	
-<div id="main">
-	<div id="sideleft"></div><div id="sideright"></div>
-	<div id="mainbody">
-	<div id="title"><!-- Title Box -->
-		<div id="info">
-			<p>phpforum --version<br />
-			version 1.0 @ 08/03/13 - 10:14pm<br />
-			user: ERROR - user not found.<br />
-			login to acess account info.</p>
-		</div>
-		<div id="indicator">
-			<p>root</p><img src="images/arrowRight.png" />
-		</div>
-	</div>
-	<div height="31px" valign="middle">
-		<table cellpadding="0" cellspacing="0" id="nav">
-			<tr height="31px" align="center">
-				<td>
-					<a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/homeOver.png',1)"><img name="Image7" border="0" src="images/home.png"></a>
-				</td>
-				<td>
-					<a href="forum.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/forumOver.png',1)"><img name="Image8" border="0" src="images/forum.png"></a>
-				</td>
-				<td>
-					<a href="profile.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/profileOver.png',1)"><img name="Image9" border="0" src="images/profile.png"></a>
-				</td>
+<table id="main" cellpadding="0px" cellspacing="0px">
+	<tr>
+		<td rowspan="4" id="sideleft"></td>
+		<td id="title"><!-- Title Box -->
+			<div id="info">
+				phpforum --version<br />
+				version 1.0 @ 08/03/13 - 10:14pm<br />
+				user: ERROR - user not found.<br />
+				login to acess account info.
+			</div>
+			<div id="indicator">
+				<p>root</p><img src="images/arrowRight.png" />
+			</div>
+		</td>
+		<td rowspan="4" id="sideright" /></td>
+	</tr>
+	<tr>
+		<td height="31px" valign="middle">
+			<table cellpadding="0" cellspacing="0" id="nav">
+			    <tr height="31px" align="center">
+				    <td>
+				    	<a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/homeOver.png',1)"><img name="Image7" border="0" src="images/home.png"></a>
+				    </td>
+				    <td>
+				    	<a href="forum.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/forumOver.png',1)"><img name="Image8" border="0" src="images/forum.png"></a>
+				    </td>
+				    <td>
+				    	<a href="profile.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/profileOver.png',1)"><img name="Image9" border="0" src="images/profile.png"></a>
+				    </td>
 <?php //this will remove the logout link in the bar when use is not logged in.
 if(isset($login)&&$login="true"){ ?>
-				<td>
-					<a href="logout.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/logoutOver.png',1)"><img name="Image11" border="0" src="images/logout.png"></a>
-				</td>
+					<td>
+				    	<a href="logout.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image11','','images/logoutOver.png',1)"><img name="Image11" border="0" src="images/logout.png"></a>
+				    </td>
 <?php }else{//in here goes what is shown when user is not logged in.
 } ?>
-		    </tr>
-		</table>
-	</div>
+		    	</tr>
+		    </table>
+</td></tr>
+<tr><td id="mainbody">

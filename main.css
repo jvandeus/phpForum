@@ -116,6 +116,7 @@ button[type="button"]:active{
 	white-space:nowrap;
 	border-spacing:0;
     border-collapse:collapse;
+    display:block;
 }
 
 #nav
@@ -124,9 +125,10 @@ button[type="button"]:active{
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 	height:31px;
-	width:100%; 
+	width:740px;
 	border-spacing: 0px;
 	border-collapse:collapse;
+	float:left;
 }
 #nav img
 {
@@ -142,20 +144,25 @@ button[type="button"]:active{
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 	width:740px;
+	height:100%;
 	white-space:normal;
+	float:left;
 }
 
 #title
 {
+	position:relative;
 	background-image:url(images/titlebg.png);
 	height:75px;
 	width:740px;
 	text-align: left;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
-	white-space:normal
+	white-space:normal;
 	text-align:left;
 	vertical-align:bottom;
+	display:inline;
+	float:left;
 }
 #title img
 {
@@ -191,22 +198,31 @@ button[type="button"]:active{
 }
 
 #info{
-	display:block;
+	display:inline;
 	position:relative;
-	width:725px;
+	width:740px;
+	height:75px;
 	text-align:right;
 	vertical-align:bottom;
 	font:Terminal;
 	font-family:Terminal;
-	font-size: 8px:
-	line-height: 1;
-	margin: 0px 15px 10px 0px;
+	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	overflow:hidden;
+	float:right;
+	/*border-style: solid;  /*-- for debugging 
+	border-width: 1px;		*/
 }
-#info div{
-	font-size: 20px:
+#info p{
+	position:absolute;
+	display:inline;
 	line-height: 1;
+	text-align:right;
+	vertical-align:bottom;
+	margin: 0px 20px 10px 0px;
+	padding: 0px 0px 0px 0px;
+	bottom:0px;
+	right: 0px;
 }
 
 #header
@@ -222,10 +238,15 @@ button[type="button"]:active{
 }
 #footer
 {
-	margin: 0px auto 0px auto;
+	position:absolute;
+	background-image:url(images/thbg.png);
+	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	width: 740px;
 	height: 35px;
+	vertical-align:middle;
+	display:block;
+	bottom:0px;
 }
 
 .divider
@@ -369,7 +390,7 @@ table#logintable tr td{ /* This fixed the inheritance issue. look this up in the
 {
 	background-image:url(images/inputbgNoFocus.png); 
 	border:none; 
-	margin: 5px 0px 5px 10px;
+	margin: 0px 0px 10px 10px;
 	padding: 0px 8px 0px 8px;
 	height: 20px;
 	width: 218px;
@@ -410,6 +431,8 @@ background-image:url(images/tableside.png);
 background-repeat:repeat-y;
 height:100%;
 width:30px;
+float:left;
+top:0px;
 }
 
 #sideright
@@ -418,6 +441,8 @@ background-image:url(images/tablesideright.png);
 background-repeat:repeat-y;
 height:100%;
 width:30px;
+float:right;
+top:0px;
 }
 
 #topic
