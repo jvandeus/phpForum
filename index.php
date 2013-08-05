@@ -1,4 +1,7 @@
+<script src="loginInstant.js"></script>
+
 <?php include('phpfiles/header.php');?>
+
 <table id="intro" cellpadding="0px" cellspacing="0px">
 	<tr><td id="greeting">
 		<div id="greeting">
@@ -17,6 +20,7 @@
 	<td>
 		<div id="filler">
 			<!-- Fills extra space that is currently Not used -->
+			<?php include 'loginForm.php'; ?>
 		</div>
 	</td></tr>
 </table>

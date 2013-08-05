@@ -32,11 +32,17 @@ th
 a
 {
 	color:#59daff;
+	text-decoration:none;
+	font-style:bold;
+	font-weight:bold;
 }
 
 a:hover
 {
 	color:white;
+	text-decoration:none;
+	font-style: bold;
+	font-weight:bold;
 }
 
 h1
@@ -65,6 +71,39 @@ p img{
 	margin: 0px auto 0px auto;
 	padding: 10px 20px 8px 0px;
 }
+/* --- Custon Button Style --- */
+button[type="button"]{
+	background: transparent;
+	background-image: url(images/buttonbgLeft.png);
+	background-repeat:no-repeat;
+	border-spacing: 0px;
+	border-collapse: collapse;
+	border-style: solid;
+	border-width: 1px;
+	border-color:#000000;
+	height:24px;
+	text-align:center;
+	vertical-align: middle;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+#button{
+	background-image: url(images/buttonbgRight.png);
+	background-repeat:no-repeat;
+	background-position:right;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 10px 0px 10px;
+}
+button[type="button"]:hover{
+	background-image: url(images/buttonbgLeftHover.png);
+}
+button[type="button"]:after{
+	background-image: url(images/buttonbgRightHover.png);
+}
+button[type="button"]:active{
+	background-image: url(images/buttonbgLeftDown.png);
+}
+/* --- End custom Button Style --- */ 
 
 #main
 {
@@ -118,7 +157,6 @@ p img{
 	text-align:left;
 	vertical-align:bottom;
 }
-
 #title img
 {
 	text-align:center;
@@ -242,48 +280,107 @@ div.divider{
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 }
-
+/* Begin Login Box formating */
 #login{
+	display:block;
+	clear:all;
 	margin: 0px 0px 0px 0px;
 	padding: 0px 0px 0px 0px;
 	vertical-align: middle;
 	text-align:center;
-	border-spacing: 0px;
 	border-collapse:collapse;
-	width: 265px;
-	height: 200px;
+	border-style: none;
+	border-spacing: 0px;
+	border-width: 0px;
+	border:none;
+}
+#login p{
+	text-align: center;
+	display:inline;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+}
+#login h1{
+	color:inherit;
+	margin: inherit;
+	padding: inherit;
+	text-align:center;
 }
 #logintable{
 	margin: 0px auto 0px auto;
 	padding: 0px 0px 0px 0px;
 	vertical-align: middle;
 	text-align:center;
-	border-spacing: 0px;
 	border-collapse:collapse;
+	border-style: none;
+	border-spacing: 0px;
+	border-width: 0px;
+	border:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:none;
+	border-top:none;
 }
-
-#user
-{
-	background-image:url(images/inputbg.png); 
-	border:none; 
+table#logintable tr td{ /* This fixed the inheritance issue. look this up in the future */
 	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 8px;
-	height: 18px;
-	width: 172px;
+	padding: 0px 0px 0px 0px;
+	vertical-align: middle;
+	text-align:center;
 	border-spacing: 0px;
 	border-collapse:collapse;
+	border-style: none;
+	border-width: 0px;
+	border:none;
+	border-right:none;
+	border-bottom:none;
+	border-left:none;
+	border-top:none;
 }
-#pass
+#logintable p{
+	text-align:center;
+}
+#logintable h1{
+	color:inherit;
+	margin: inherit;
+	padding: inherit;
+	text-align:center;
+}
+#log{
+	text-align:center;
+	vertical-align:middle;
+	height:32px;
+	min-height:32px;
+	max-height:32px;
+}
+#log p{
+	display:inline;
+}
+#log h1{
+	display:inline;
+	color:#FFF;
+}
+#submitButton{
+	display:inline;
+	float:right;
+	text-align:right;
+}
+/* input feilds */
+#logintable input[type="text"],input[type="password"]
 {
-	background-image:url(images/inputbg.png); 
+	background-image:url(images/inputbgNoFocus.png); 
 	border:none; 
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 8px;
-	height: 18px;
-	width: 172px;
+	margin: 5px 0px 5px 10px;
+	padding: 0px 8px 0px 8px;
+	height: 20px;
+	width: 218px;
 	border-spacing: 0px;
 	border-collapse:collapse;
 }
+#logintable input[type="text"]:focus,input[type="password"]:focus
+{
+	background-image:url(images/inputbgFocus.png); 
+}
+/* End Login Box Formatting */
 
 #thbot
 {
@@ -321,30 +418,6 @@ background-image:url(images/tablesideright.png);
 background-repeat:repeat-y;
 height:100%;
 width:30px;
-}
-
-#featured
-{
-	background-color:#333;
-	margin: 20px auto 20px auto;
-	padding: 12px 12px 12px 12px;
-	height:240px;
-	width: 680px;
-	text-align: left;
-	line-height: 1.5;
-	font-size: 12pt;
-}
-#featured p
-{
-	margin: 0px 0px 0px 0px;
-	padding: 0px 0px 0px 0px;
-	text-align:justify;
-	font-size: 10pt;
-}
-#featured img{
-	padding: 0px 0px 0px 0px;
-	margin: 0px 15px 0px 0px;
-	float: left;
 }
 
 #topic
@@ -407,20 +480,6 @@ width:30px;
 	padding: 0px 0px 0px 0px;
 }
 
-#about{
-	margin: 0px 0px 0px 0px;
-	padding: 20px 0px 20px 0px;
-	line-height: 1.5;
-	width: 100%;
-}
-#portfolio
-{
-	margin: 0px auto 0px auto;
-	padding: 30px 20px 20px 0px;
-	line-height: 1.5;
-}
-#portfolio p { font-size: 10pt; }
-
 #register{
 	margin: 0px auto 0px auto;
 	padding: 30px 0px 0px 0px;
@@ -457,7 +516,7 @@ width:30px;
 #greeting{
 	background-color:#333;
 	text-align:left;
-width:300px;						/* width definition*/
+	width:300px;						/* width definition*/
 	margin: 0px 0px 0px 0px;
 	padding: 15px 15px 15px 15px;
 }

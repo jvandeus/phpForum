@@ -36,3 +36,11 @@ NOTE: applied following:
     now it is:
     	url = ssh://git@github.com:jvandeus/forum.git
     	
+<!-- NOTES: 
+	I need to make sure there is an error page for stuff like when there are no posts in a topic
+	or when there are no topics. 
+	Also make sure blank posts are not allowed to be entered
+	Make an error page that with also accept error messages via the GET method.
+	Add a "last edited" thing to posts.
+	Check to make sure the page is valid for content showing.
+	Check to see if the id is valid for content showing.-->
