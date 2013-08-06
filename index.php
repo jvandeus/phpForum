@@ -26,18 +26,19 @@
 </table>
 
 <div id="thtop"></div>
-<table id="header" cellspacing="0" cellpadding="0">
-	<tr><th id="topic">Topic</th>
-		<td class="divider"></td>
-		<th id="posts">Posts</th>
-		<td class="divider"></td>
-		<th id="lastpost">Last Post</th>
-		<td class="divider"></td>
-		<th id="createdby">Date Created</th>
-	</tr>
+<div id="header">
+	<table cellspacing="0" cellpadding="0">
+		<tr><th id="topic">Topic</th>
+			<th id="posts">Posts</th>
+			<th id="lastpost">Last Post</th>
+			<th id="date">Date Created</th>
+		</tr>
+	</table>
+</div>
+<div id="thbot"></div>
 
-<tr><td id="thbot" colspan="7"></td></tr><!-- insert divider-->
-
+<div id="forum">
+<table>
 <?php
 	//display all the news
 	$result = mysql_query("select * from fordat order by timed desc"); 
@@ -68,7 +69,7 @@
 		{
 			$color="#444";
 		}
-		echo("<tr><td colspan='2' id='forum' style='background-color:$color;'><p>
+		echo("<tr style='background-color:$color;' ><td id='leftSpace'></td><td id='topic' style='background-color:$color;'><p>
 		<a href='content.php?id=$id'>$title</a> - Page: ");//echo topic start
 		
 		for($a=1; $a<=$pages; $a++)
@@ -81,8 +82,8 @@
 				echo(" - <a href='topdel.php?cmd=topdel&id=$id'>DELETE</a></p>");//end topic
 			}
 		}
-		echo("</td><td colspan='2' id='forum' style='background-color:$color;'>$posts</td>
-		<td colspan='2' id='forum' style='background-color:$color;'>");//echo number of posts
+		echo("</td><td id='posts'>$posts</td>
+		<td id='lastpost'>");//echo number of posts
 		$i=0;
 		while(1 > $i)
 		{
@@ -90,9 +91,10 @@
 		$i++;
 		}
 		echo("</td>
-		<td id='forum' style='background-color:$color;'>$timed</td></tr>");
+		<td id='date'>$timed</td><td id='rightSpace'></td</tr>");
 	}
 ?>
-<tr><td id="thtop" colspan="7"></td></tr> <!-- insert divider-->
 </table>
+</div>
+<div id="thtop"></div> <!-- insert divider-->
 <?php include('phpfiles/footer.php'); ?>
