@@ -103,7 +103,7 @@ function MM_swapImage() { //v3.0
 					<a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','images/homeOver.png',1)"><img name="Image7" border="0" src="images/home.png"></a>
 				</td>
 				<td>
-					<a href="index.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/forumOver.png',1)"><img name="Image8" border="0" src="images/forum.png"></a>
+					<a href="forum.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','images/forumOver.png',1)"><img name="Image8" border="0" src="images/forum.png"></a>
 				</td>
 				<td>
 					<a href="profile.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image9','','images/profileOver.png',1)"><img name="Image9" border="0" src="images/profile.png"></a>

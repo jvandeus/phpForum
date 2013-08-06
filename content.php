@@ -59,7 +59,7 @@ if(isset($login)&&$login=="true"){ //if user is logged in
 		</script>
 <?php
 }
-echo("<div align=center><h1><br>Go to Page: ");
+echo("<div id='pages'><h1>Go to Page: ");
 for($i=1; $i<=$pages; $i++)
 {
 	echo("<a href='content.php?page=$i&id=$id' style='color:");
@@ -73,7 +73,7 @@ for($i=1; $i<=$pages; $i++)
 	}
 	echo(";'>$i</a> ");
 }
-echo ("</h1></div><br>");
+echo ("</h1></div>");
 
 //Begin Fetching Content
 $pgcon=mysql_query("select * from forcon where id=$id order by idpost desc limit $startfrom, 10") or die(mysql_error());
@@ -94,8 +94,8 @@ while($r=mysql_fetch_array($pgcon))
 	}
 	
 echo("
-<div class='divider'></div>
-</div><div id='coninfo'>$uuser <div style='float: right;'>");//begins the post header
+<div id='thtop'></div>
+<div id='coninfo'><h1>$uuser</h1><p>");//begins the post header
 
 if(isset($login)&&$login=="true"){ //if user is logged in
 	if($acess == 1 || strcmp($user,$uuser) == 0){//user is either admin or the origional creator CASE SENSITIVE
@@ -107,7 +107,7 @@ if(isset($login)&&$login=="true"){ //if user is logged in
 	}
 }
 echo("$timed");//ends the post header
-echo nl2br("</div></div><div id='divider'></div><div id='content' style='background-color:$color;' >$content</div>");//begins the content
+echo nl2br("</p></div><div id='thbot'></div><div id='content' style='background-color:$color;' >$content</div>");//begins the content
 }?>
 <br>
 <h1 align="center"><a href="forum.php">Back to Forum</a></h1>
